@@ -1,0 +1,116 @@
+<template name="messageScreen">
+
+    {{#if isAndroid}}
+    <div class="bar bar-header bar-colorAndroidTwo" style="position:fixed">
+        <button class="buttons button button-clear back-button pull-left button-entering button-active" style="color:white;" id="back">
+            <i class="icon ion-android-arrow-back"></i>
+            <span class="bar-titleColorAndroid">Chats</span>
+        </button>
+        <h1 class="title bar-titleColorAndroid">{{profile.name}}</h1>
+    </div>
+
+    {{#ionView}}
+    <img src="{{img}}" style="height: {{height}}px; width: 100%; position:fixed; z-index : -1;">
+    {{#ionContent}}
+
+    <div class="chatAndroid">
+        <div class="insideAndroid"></div>
+    </div>
+
+    {{/ionContent}}
+
+    <div class="tabs" id="tab" style="background:none;"> <!-- background:none transparent yapabilmek icin-->
+        <button class="button button-fab bar-colorAndroidTwo icon ion-paperclip customAttach" id="attachment" style="bottom:17%;"></button>
+
+        <textarea id="message" class="textAndroid" placeholder=" Type a Message..." style="height:100%; bottom:10%; "></textarea>
+
+        <button class="button button-fab icon ion-android-send customSend bar-colorAndroidTwo" id="sendAndroid" style="bottom:17%;"></button>
+
+    </div>
+    {{/ionView}}
+    {{else}}
+
+
+    <!-- <div class="bar bar-header bar-stable">
+        <button class="buttons button button-clear back-button pull-left button-entering button-active" style="color:#03A9F4;" id="back">
+            <i class="icon ion-ios-arrow-back"></i>
+            Back
+        </button>
+        <h1 class="title friendName">{{profile.name}}</h1>
+        <h1 class="title counter" style="display:none">{{counter}} Selected</h1>
+
+    </div>
+
+    <hr>
+
+    <img src="{{img}}" style="height: {{height}}px; width: 100%; position:fixed; z-index : -1;">
+    {{#ionContent}}
+    <div class="chat" id="chatiOS">
+            <div class="inside" id="{{random}}"></div>
+
+    </div>
+    {{/ionContent}}
+
+    <div class="tabs" id="tabMessage">
+        <button class="button button-clear icon ion-paperclip customAttach" id="attachment">
+        </button>
+
+        <textarea id="message" placeholder=" Type a Message..."> </textarea>
+
+         <button class="button button-clear icon ion-ios-arrow-forward customSend" id="sendiOS" disabled>
+         </button>
+    </div>
+
+    <div class="tabs-icon-top" id="tabButtons" style="display:none">
+        <div class="tabs">
+                <a class="tab-item iosDelete" data-ion-tab="">
+                    <i class="icon ion-ios-trash" style="color:#D50000"></i>
+                        Delete
+                </a>
+
+                <a class="tab-item iosForward" data-ion-tab="">
+                    <i class="icon ion-ios-redo" style="color:#00BFA5"></i>
+                        Forward
+                </a>
+                <a class="tab-item iosCopy" data-ion-tab="">
+                    <i class="icon ion-ios-list calm" ></i>
+                        Copy
+                </a>
+                <a class="tab-item iosCancel" data-ion-tab="">
+                    <i class="icon ion-ios-close"></i>
+                        Cancel
+                </a>
+
+        </div>
+    </div> -->
+    <div class="bar bar-header bar-colorAndroidTwo" style="position:fixed">
+        <button class="buttons button button-clear back-button pull-left button-entering button-active" style="color:white;" id="back">
+            <i class="icon ion-android-arrow-back"></i>
+            <span class="bar-titleColorAndroid">Chats</span>
+        </button>
+        <h1 class="title bar-titleColorAndroid">{{profile.name}}</h1>
+    </div>
+
+    {{#ionView}}
+    <img src="{{img}}" style="height: {{height}}px; width: 100%; position:fixed; z-index : -1;">
+    {{#ionContent}}
+
+    <div class="chatAndroid">
+        <div class="insideAndroid"></div>
+    </div>
+
+    {{/ionContent}}
+
+    <div class="tabs" id="tab" style="background:none;"> <!-- background:none transparent yapabilmek icin-->
+        <button class="button button-fab bar-colorAndroidTwo icon ion-paperclip customAttach" id="attachment" style="bottom:17%;"></button>
+
+        <textarea id="message" class="textAndroid" placeholder=" Type a Message..." style="height:100%; bottom:10%; "></textarea>
+
+        <button class="button button-fab icon ion-android-send customSend bar-colorAndroidTwo" id="sendAndroid" style="bottom:17%;"></button>
+
+    </div>
+    {{/ionView}}
+
+    {{/if}}
+
+</template>

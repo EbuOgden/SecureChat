@@ -1,0 +1,37 @@
+<template name ="contacts">
+    {{#contentFor "headerTitle"}}
+    <h1 class="title bar-titleColorAndroid">Contacts</h1>
+    <button class="button button-clear" data-ion-modal="newPerson"><i class="icon ion-person-add light"></i></button>
+    {{/contentFor}}
+
+    {{#ionView}}
+        {{#ionNavView}}
+            {{> profileTab}}
+        {{/ionNavView}}
+    
+    <div id="androidList">
+            {{#ionContent class="forSwipe"}}
+                {{#ionList class="animated fadeIn contactList"}}
+                    {{#each deneme}}
+                        {{#ionItem}}
+                            {{#linkTo route='message.Screen'}}
+                                <button class="button button-large button-clear pp"><h3>{{profile.name}}</h3></button><!--pp classi her tiklamada streamle bilgi yollayabilmek icin -->
+                            {{/linkTo}}
+                        {{/ionItem}}
+                    {{/each}}
+                {{/ionList}}
+                <!--{{#ionList}}
+                    {{#each lists}}
+                        {{#ionItem}}
+                            {{#linkTo route='message.Screen'}}
+                                <button class="button button-large button-clear"><h3>{{name}}</h3></button>
+                            {{/linkTo}}
+                        {{/ionItem}}
+                    {{/each}}
+                {{/ionList}}-->
+            {{/ionContent}}
+     
+     </div>       
+    {{/ionView}}
+    
+</template>

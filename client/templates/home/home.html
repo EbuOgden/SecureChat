@@ -1,0 +1,120 @@
+<template name="home">
+    {{#if isAndroid}}
+    
+    {{#ionView}}
+    
+    {{#ionSlideBox class="contentBackground"}}
+    
+    {{#ionSlide}}
+    <i class="icon ion-happy-outline" style="font-size:3em"></i>
+    <i class="icon ion-chatbubbles colorAndroidIconsSix" style="font-size:5em"></i>
+    <i class="icon ion-happy-outline" style="font-size:3em"></i><br/>
+    <h3>Chat with your friends</h3>
+    
+    <div class="row" id="slider">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+                <button class="button button-colorAndroidTwo bar-titleColorAndroid goSign">
+                    Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+                </button>
+        </div>
+    </div>
+    
+    {{/ionSlide}}
+    
+    {{#ionSlide}}
+    <i class="icon ion-lock-combination colorAndroidIconsFour" style="font-size:5em"></i>
+    <h3>Safely</h3>
+    
+    <div class="row">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+                <button class="button button-colorAndroidTwo bar-titleColorAndroid goSign">
+                    Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+                </button>
+        </div>
+    </div>
+
+    {{/ionSlide}}
+    
+    {{#ionSlide}}
+    <i class="icon ion-ios-speedometer-outline colorAndroidIconsFive" style="font-size:5em"></i>
+    <h3>Quickly</h3>
+    
+    <div class="row">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+                <button class="button button-colorAndroidTwo bar-titleColorAndroid goSign">
+                    Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+                </button>
+        </div>
+    </div>
+
+    {{/ionSlide}}
+    {{/ionSlideBox}}
+    {{/ionView}}
+    
+    {{else}}
+    
+    {{#ionView}}
+    
+    {{#ionSlideBox}}
+    
+    {{#ionSlide class="light-bg"}}
+    <i class="icon ion-happy-outline" style="font-size:3em"></i>
+    <i class="icon ion-chatbubbles calm" style="font-size:5em"></i>
+    <i class="icon ion-happy" style="font-size:3em"></i><br/>
+    <h3>Chat with your friends</h3>
+    
+    <div class="row" id="slider">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+            <a href="/signup">
+            <button class="button button-calm">
+            Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+        </button>
+            </a>
+        </div>
+    </div>
+    
+    {{/ionSlide}}
+    
+    {{#ionSlide class="light-bg"}}
+    <i class="icon ion-lock-combination energized" style="font-size:5em"></i>
+    <h3>Safely</h3>
+    
+    <div class="row">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+            <a href="/signup">
+            <button class="button button-calm">
+                Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+            </button>
+            </a>
+        </div>
+    </div>
+
+    {{/ionSlide}}
+    
+    {{#ionSlide class="light-bg"}}
+    <i class="icon ion-ios-speedometer-outline balanced" style="font-size:5em"></i>
+    <h3>Quickly</h3>
+    
+    <div class="row">
+        <div class="col">
+            <br/><br/><br/><br/><br/>
+            <a href="/signup">
+            <button class="button button-calm">
+                Let's Start!&nbsp;&nbsp;<i class="icon ion-log-in"></i>
+            </button>
+            </a>
+        </div>
+    </div>
+
+    {{/ionSlide}}
+    {{/ionSlideBox}}
+    
+    {{/ionView}}
+    
+    {{/if}}
+</template>

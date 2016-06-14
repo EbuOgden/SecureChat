@@ -1,0 +1,3 @@
+ContactsController = RouteController.extend({
+    
+})

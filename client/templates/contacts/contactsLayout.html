@@ -1,0 +1,27 @@
+<template name="contactsLayout">
+    {{#if isAndroid}}
+	 {{#ionBody}}
+    
+    {{> ionNavBar class="bar-colorAndroidTwo"}}
+   
+    
+    {{#ionView}}
+    
+        {{> yield}}
+    
+    {{/ionView}}
+    
+    
+    {{/ionBody}}
+    
+    {{else}}
+    {{#ionBody}}
+    
+    {{> ionNavBar class="bar-colorAndroidTwo"}}
+   
+    {{#ionView}}
+        {{> yield}}
+    {{/ionView}}
+    {{/ionBody}}
+    {{/if}}
+</template>

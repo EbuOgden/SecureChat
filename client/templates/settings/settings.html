@@ -1,0 +1,94 @@
+<template name="settings">
+    {{#if isAndroid}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title bar-titleColorAndroid">Settings</h1>
+    {{/contentFor}}
+    {{#ionNavView}}
+      {{> profileTab}}
+    {{/ionNavView}}
+    
+    {{#ionView}}
+    <div id="listAndroid">
+        {{#ionContent class="contentBackground"}}
+            <div class="list animated fadeIn settingsList">
+        
+                  
+                <a class="item item-avatar listBackground" href="/settings/profile">
+                    <img src="/backgrounds/messageBackground6.jpg">
+                      <h2 style="margin-top : 6%">Profile</h2>
+                      <h6>Status : {{stat}}</h6>
+                </a>
+              
+                <a class="item item-icon-left item-avatar listBackground" href="/settings/chat">
+                    <i class="icon ion-android-chat colorAndroidIconsTwo" style="font-size:3em; margin-left: 5%;"></i>
+                    <h2 style="margin-top : 6%;">Chat</h2>
+                </a>
+              
+                <a class="item item-icon-left item-avatar listBackground" href="/settings/notifications">
+                    <i class="icon ion-android-notifications colorAndroidIconsThree animated swing" style="font-size:3em; margin-left: 5%;"></i>
+                    <h2 style="margin-top : 6%;">Notifications</h2>
+                </a>
+              
+                <!--<a class="item item-icon-left listBackground" href="#">
+                  <i class="icon ion-person-stalker"></i>
+                  Friends
+                  <span class="badge badge-assertive">0</span>
+                </a>-->
+              
+              
+             </div>
+
+        {{/ionContent}}
+  </div>
+  {{/ionView}}
+
+
+    
+   
+{{else}}
+    {{#contentFor "headerTitle"}}
+        <h1 class="title">Settings</h1>
+    {{/contentFor}}
+    
+    {{#ionNavView}}
+      {{> profileTab}}
+    {{/ionNavView}}
+    
+    
+    {{#ionBody}}
+    {{#ionContent}}
+    <div class="list">
+  
+  
+  
+  <a class="item item-icon-left item-icon-right" href="/settings/profile">
+    <i class="icon ion-ios-people" style="color:#00E5FF"></i>
+    Profile
+    <i class="icon ion-ios-arrow-forward"></i>
+  </a>
+  
+  <a class="item item-icon-left item-icon-right" href="/settings/chat">
+    <i class="icon ion-ios-chatbubble" style="color:#1DE9B6"></i>
+    Chat
+    <i class="icon ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left item-icon-right" href="/settings/notifications">
+    <i class="icon ion-android-notifications" style="color:#F44336"></i>
+    Notifications
+    <i class="icon ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-person-stalker"></i>
+    Friends
+    <span class="badge badge-assertive">0</span>
+  </a>
+
+</div>
+{{/ionContent}}
+
+    
+    {{/ionBody}}
+{{/if}}
+</template>
